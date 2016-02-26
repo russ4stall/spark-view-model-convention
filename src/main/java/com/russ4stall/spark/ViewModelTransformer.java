@@ -15,7 +15,11 @@ public class ViewModelTransformer implements ResponseTransformer {
 
     public ViewModelTransformer(TemplateEngine templateEngine, String templateDirectory, String templateExtension, TemplateModel templateModel) {
         this.templateEngine = templateEngine;
+        //TODO: check for preceding /, if doesn't exist -> add it
+        //TODO: allow to be empty string
         this.templateDirectory = templateDirectory;
+        //TODO: check for preceding period, if doesn't exist -> add it
+        //TODO: make default .html... or something else
         this.templateExtension = templateExtension;
         this.templateModel = templateModel;
     }
